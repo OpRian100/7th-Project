@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Subtract</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Festive&family=Quicksand&display=swap');
+            *{
+                font-family: 'Festive', cursive;
+                font-size: 40px;  
+            }
+            body{
+                background-color: grey;
+                color: black;
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+                margin-left: 75px;
+                color: grey;
+                transition: 0.3s ease-in;
+            }
+
+            a:hover{
+                font-size: 50px;
+            }
+
+            nav{
+                background-color: black;
+                margin-bottom: 50px;
+            }
+
+            .sub{
+                color: royalblue;
+            }
+
+            .rtp{
+                color: black;
+                cursor: pointer;
+            }
+
+            .rtp:hover{
+                color: royalblue;
+            }
+
+            .cal{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Subtraction</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="add.html">Add</a>
+            <a class="sub" href="subtract.html">Subtract</a>
+            <a href="multi.html">Multiplication</a>
+            <a href="division.html">Division</a>
+            <a href="multitable.html">Tables</a>
+        </nav>
+        <input id="value1" type="text" placeholder="Enter A Number"> -
+        <input id="value2" type="text" placeholder="Enter Another Number"><br> <br>
+        <input class="cal" type="submit" value="Subtract" onclick="Sub()">
+        <h2 id="Sub"></h2>
+    </body>
+    <script>
+            function Sub() {
+            var value1 = parseInt(document.getElementById("value1").value);
+            var value2 = parseInt(document.getElementById("value2").value);
+            var h2 = document.getElementById("Sub")
+            h2.innerText = value1 - value2;
+            alert(value1 - value2)
+        }
+    </script>
+    <a class="rtp" href="subtract.html">Refresh The Page</a>
+</html>

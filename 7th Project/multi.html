@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multiply</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Festive&family=Quicksand&display=swap');
+            *{
+                font-family: 'Festive', cursive;
+                font-size: 40px;  
+            }
+            body{
+                background-color: grey;
+                color: black;
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+                margin-left: 75px;
+                color: grey;
+                transition: 0.3s ease-in;
+            }
+
+            a:hover{
+                font-size: 50px;
+            }
+
+            nav{
+                background-color: black;
+                margin-bottom: 50px;
+            }
+
+            .mult{
+                color: royalblue;
+            }
+
+            .rtp{
+                color: black;
+                cursor: pointer;
+            }
+
+            .rtp:hover{
+                color: royalblue;
+            }
+
+            .cal{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multiplication</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="add.html">Add</a>
+            <a href="subtract.html">Subtract</a>
+            <a class="mult" href="multi.html">Multiplication</a>
+            <a href="division.html">Division</a>
+            <a href="multitable.html">Tables</a>
+        </nav>
+        <input id="value1" type="text" placeholder="Enter A Number"> x
+        <input id="value2" type="text" placeholder="Enter Another Number"><br> <br>
+        <input type="submit" class="cal" value="Multiply" onclick="Mult()">
+        <h2 id="Mult"></h2>
+    </body>
+    <script>
+        function Mult() {
+            var value1 = parseInt(document.getElementById("value1").value);
+            var value2 = parseInt(document.getElementById("value2").value);
+            var h2 = document.getElementById("Mult")
+            h2.innerText = value1 * value2;
+            alert(value1 * value2)
+        }
+    </script>
+    <a class="rtp" href="multi.html">Refresh The Page</a>
+</html>

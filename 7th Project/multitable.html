@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tables</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Festive&family=Quicksand&display=swap');
+            *{
+                font-family: 'Festive', cursive;
+                font-size: 40px;  
+            }
+            body{
+                background-color: grey;
+                color: black;
+                text-align: center;
+            }
+
+            a{
+                text-decoration: none;
+                margin-left: 75px;
+                color: grey;
+                transition: 0.3s ease-in;
+            }
+
+            a:hover{
+                font-size: 50px;
+            }
+
+            nav{
+                background-color: black;
+                margin-bottom: 50px;
+            }
+
+            .multab{
+                color: royalblue;
+            }
+
+            .cal{
+                cursor: pointer;
+            }
+
+            .rtp{
+                color: black;
+                cursor: pointer;
+            }
+
+            .rtp:hover{
+                color: royalblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="add.html">Add</a>
+            <a href="subtract.html">Subtract</a>
+            <a href="multi.html">Multiplication</a>
+            <a href="division.html">Division</a>
+            <a class="multab" href="multitable.html">Tables</a>
+            </nav>
+            <a class="rtp" href="multitable.html">Refresh The Page</a> <br>
+            <input id="userinput" type="text" placeholder="Enter a  Number"> <br>
+        <input type="text" placeholder="No. of times" id="number"> <br> <br>
+        <input type="submit" value="Go" onclick="multiply()" class="cal">
+    </body>
+    <script>
+        function multiply() {
+            var userinput = document.getElementById("userinput").value;
+            var number = parseInt(document.getElementById('number').value);
+
+            var count = 1;
+
+            while(count <= number)
+            {
+                var product = userinput * count;
+                var element = document.createElement("h2");
+                element.innerText = userinput + " x " + count + " = " + product;
+                document.body.append(element);
+                count = count + 1;
+            }
+        }
+    </script>
+</html>
